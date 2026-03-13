@@ -14,6 +14,13 @@ command = "npm run build"
 binding = "DB"
 database_name = "nodewarden-db"
 
+[[durable_objects.bindings]]
+name = "NOTIFICATIONS_HUB"
+class_name = "NotificationsHub"
+
 [[kv_namespaces]]
 binding = "ATTACHMENTS_KV"
-id = "5441c718d39e49229fc9c0e5ca0eff8f"
+
+[[migrations]]
+tag = "v1-notifications-hub"
+new_sqlite_classes = [ "NotificationsHub" ]
